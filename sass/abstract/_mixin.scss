@@ -1,0 +1,23 @@
+@mixin absCenter {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+//media query manager
+@mixin response($break){
+  @if $break == big-desktop {
+    @media (min-width:93.75em ){ @content }  //1800/16
+  }
+  @if $break == large-tap {
+    @media (max-width:75em ){ @content } //1200/16
+  }
+  @if $break == tab {
+    @media (max-width: 56.25em ){ @content }  // 900/16
+  }
+  @if $break == phone {
+    @media (max-width: 37.5em){@content }    //600px/16
+  }
+
+}

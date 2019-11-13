@@ -1,0 +1,173 @@
+.profile {
+  width: 78%;
+  height: 57rem;
+  // top: 45% !important;
+  box-shadow: 0 2rem 4rem rgba($color-black, .5);
+  border-radius: 10px;
+  @include absCenter;
+  top:44% !important;
+  background-color: transparent;
+  perspective: 155rem;
+  z-index: 101;
+  @include response (tab) {
+    width: 100%;
+    box-shadow: none;
+    top:50% !important;
+
+  }
+  //flip sides of  the rotate animations
+  &__front, &__back {
+    transition: all .7s;
+    backface-visibility: hidden;
+  }
+  &__back {
+    height: 85%;
+  }
+  &__left {
+    height: 56rem;
+    position: relative;
+    border-radius: 4px;
+    background-image: linear-gradient(to right, $color-light, $color-dark);
+    transform: translate(0, 4px);
+    @include response (tab) {
+      height: 12rem;
+
+    }
+
+    &--box {
+      width: 95%;
+      height: 95%;
+      color: #eee;
+      padding-top: .2rem;
+      border-radius: 3px;
+      @include response (tab) {
+        padding-top: .0;
+
+      }
+
+    }
+
+  }
+
+  &__right {
+    height: 55rem;
+    position: relative;
+    transform: translate(0, 4px);
+
+    @include response (tab) {
+      // height: 10rem;
+
+    };
+    &--box {
+      width: 95%;
+      height: 95%;
+      color: #eee;
+      border-radius: 3px;
+      perspective: 150rem;
+      @include absCenter;
+
+    }
+  }
+
+  &__photo {
+    width: 12.5rem;
+    height: 12.5rem;
+    background-color: rgba($color-black, .3);
+    border-radius: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    // margin-top: $gutter-horizontal;
+    @include response (tab) {
+      margin-left: $gutter-horizontal;
+      float: left;
+      width: 8.5rem;
+      height: 8.5rem;
+
+
+    }
+
+    &--img {
+      width: 12.5rem;
+    }
+  }
+
+  &__paragraph {
+    padding: 4rem 5rem;
+    & p {
+      font-size: 2.3rem;
+      color: #ddd;
+      @include response (tab) {
+        font-size: 3.3rem;
+
+      };
+    }
+  }
+
+}
+.skill {
+  @include response(tab){
+    width: auto;
+    float: left;
+    margin-left: 1rem;
+  };
+}
+
+.collection {
+  padding: 0;
+  list-style: none;
+  @include response (tab) {
+    display: inline-block;
+    margin-top: 0;
+
+  }
+
+  &__item {
+    word-break:break-all;
+    font-size: 1.7rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    padding: .3rem 1.3rem;
+    border-bottom:solid 1px transparent;
+    transition: all .2s;
+    @include response (tab) {
+      display: inline-block;
+      font-size: 1.7rem;
+      &:not(:last-child){
+        padding-right: 0;
+
+
+      }
+
+    }
+
+      &:nth-child(2){
+        background-color:transparent;
+        text-align: center;
+        text-transform: uppercase;
+        @include response (tab) {
+          display: block;
+          margin-top: 0 !important;
+
+        }
+      }
+      &:not(:last-child){
+        margin-bottom: .5rem;
+
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($color-black, .1);
+        &:nth-child(2){
+          border-bottom:solid 1px transparent;
+          background-color: transparent;
+          cursor: default;
+        }
+      }
+  }
+}
+.input-field, .form {
+  width: 38rem;
+}
+// #2c2435

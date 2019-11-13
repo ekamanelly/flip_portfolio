@@ -1,0 +1,29 @@
+.gist {
+  // background-color: blue;
+  padding-top: 1rem;
+
+  &__field {
+    text-align: center;
+  }
+  &__say {
+    height: 18rem;
+    width: 38rem;
+    padding: 10px;
+    resize: none;
+    border-radius: 5px;
+    background-color: rgba($color-black, .5);
+    color: white;
+    font-size: 2.4rem;
+    letter-spacing: .3rem;
+    font-weight: 300;
+    outline: none;
+    border: none;
+    line-height: 1.2;
+
+    &--ok {
+      text-align: center;
+    }
+
+  }
+
+}

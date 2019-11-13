@@ -1,0 +1,49 @@
+.cta {
+  @include absCenter;
+  text-align: center;
+  width: 25rem;
+  padding: .4rem .2rem;
+  top:92%;
+  border-radius: 100px;
+  box-shadow: 0 2rem 4rem rgba($color-black, .5);
+  z-index: 100;
+
+  @include response(tab) {
+    position: fixed;
+    padding: 0;
+    top:4%;
+    left: 93%;
+    z-index: 104;
+    width:auto;
+    height: 35rem;
+    border-radius: 3px;
+    box-shadow: none;
+
+  };
+  & > div:not(last-child){
+    margin-right: .7rem;
+
+    @include response (tab) {
+      box-shadow: 0 2rem 4rem rgba($color-black, .5);
+      margin-right: 0;
+      margin-bottom: 4rem;
+    };
+  }
+  &__contact {
+    display: inline-block;
+    position: relative;
+    top:50%;
+    transform: translateY(-20%);
+    border-radius: 100px;
+  }
+ &__github {
+   display: inline-block;
+   position: relative;
+   top:50%;
+     &--img {
+       width: 4rem;
+       color: white;
+     }
+
+  }
+}

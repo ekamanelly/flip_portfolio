@@ -1,0 +1,54 @@
+html {
+  font-size: 62.5%; //1rem = 10px
+  @include response(large-tab){
+    font-size: 56.25%;  //1rem =9px 8/16 =50%
+    color: pink;
+  }
+  @include response(tab){
+    font-size: 50%;  //1rem =8px 8/16 =50%
+    color: orangered;
+
+  }
+  @include response(phone){
+    font-size: 40%;  //1rem =8px 8/16 =50%
+    color: orangered;
+
+  }
+  @include response(big-desktop){
+    font-size: 75%;  //1rem =12px 12/16 =50%
+    color: #eea;
+  }
+
+}
+ body {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-size: 1.9rem;
+   font-family: 'Roboto','ZCOOL XiaoWei', sans-serif;
+   color: white;
+   letter-spacing: .2rem;
+
+ }
+
+// style for scrollbar
+ // width
+ ::-webkit-scrollbar {
+   width: 9px;
+ }
+
+ // track
+ ::-webkit-scrollbar-track {
+   border-radius: 10px;
+   padding: 3rem;
+ }
+ // Handle
+ ::-webkit-scrollbar-thumb {
+   background: $color-dark;
+   border-radius: 5px;
+ }
+
+ // Handle on hover
+ ::-webkit-scrollbar-thumb:hover {
+   background: rgba($color-dark,.8);
+ }

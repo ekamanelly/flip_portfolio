@@ -1,0 +1,19 @@
+// used on project__box
+@keyframes glow {
+
+  0% {
+    box-shadow: 0 1rem 6rem rgba($color-blue-1, .5);
+    transform: scale(1.02);
+  }
+
+  50% {
+    box-shadow: 0 1rem 6rem rgba($color-blue-2, .5);
+  }
+
+  100% {
+    box-shadow: 0 1rem 6rem rgba($color-blue-3, .5);
+   }
+
+
+
+}

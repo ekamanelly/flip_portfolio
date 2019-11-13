@@ -1,0 +1,31 @@
+.btn {
+  padding: .2rem 1.6rem;
+  font-size: 2.4rem;
+  border-radius: 100px;
+  outline: none;
+  transition: all .3s;
+  cursor: pointer;
+  border: 0;
+  color: #eee;
+
+  &:hover {
+    transform: scale(1.03) translateY(-.1rem);
+  }
+  &:active {
+    transform: scale(1);
+    background-image: $color-light;
+  }
+  @include response (tab) {
+    padding: .5rem 1.1rem;
+    background-image: linear-gradient( $color-light);
+
+  }
+  &__contact {
+  background-image: linear-gradient(to bottom, $color-dark, $color-light);
+  }
+  &__github,
+  &__ok{
+  background-image: linear-gradient(to bottom, $color-button-1, $color-button-2);
+  }
+
+}
